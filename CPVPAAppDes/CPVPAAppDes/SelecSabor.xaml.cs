@@ -23,8 +23,8 @@ namespace CPVPAAppDes
             //  _cantidad = cantidad;
             BindingContext = valCat.ToString();
             BindingContext = valPres;
-            DisplayAlert("Datos", valCat, "aceptar");
-            DisplayAlert("Datos", valPres, "aceptar");
+            //DisplayAlert("Datos", valCat, "aceptar");
+            //DisplayAlert("Datos", valPres, "aceptar");
 
         }
 

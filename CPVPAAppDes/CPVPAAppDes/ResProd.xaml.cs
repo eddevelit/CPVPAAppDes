@@ -27,9 +27,9 @@ namespace CPVPAAppDes
              dato1 = datos[0];
              dato2 = datos[1];
              dato3 = datos[2];
-            DisplayAlert("Datos", dato1, "aceptar");
-            DisplayAlert("Datos", dato2, "aceptar");
-            DisplayAlert("Datos", dato3, "aceptar");
+            //DisplayAlert("Datos", dato1, "aceptar");
+            //DisplayAlert("Datos", dato2, "aceptar");
+            //DisplayAlert("Datos", dato3, "aceptar");
             ////======debas
 
             //Keys.DataBaseName = "prueba.db3";
@@ -43,6 +43,21 @@ namespace CPVPAAppDes
             CatPro.Text = dato1;
             PresProd.Text = dato2;
             SabPro.Text = dato3;
+            listaProduccion.ItemTemplate = new DataTemplate(typeof(ProduccionCell));
+            Keys.DataBaseName = "prueba.db3";
+            ResProd.DB = LocalDB.Instance;
+
+            ResProd.DB.Produccion.Add(new ORM.Produccion
+            {
+                Cantidad = int.Parse(CatPro.Text),
+                Presentacion = PresProd.Text,
+                Sabor = SabPro.Text
+
+            });
+            ResProd.DB.SaveChanges();
+            dato1 = "ok";
+            DisplayAlert("Se inserto el registró  :", dato1, "aceptar");
+            listaProduccion.ItemsSource = ResProd.DB.Produccion.ToList();
 
             //using (var data = new DataAccess())
             //{
@@ -63,7 +78,7 @@ namespace CPVPAAppDes
             //    Sabor = SabPro.Text
             //};
             //======debas
-
+            /*
             Keys.DataBaseName = "prueba.db3";
             ResProd.DB = LocalDB.Instance;
 
@@ -78,6 +93,7 @@ namespace CPVPAAppDes
             dato1 = "ok";
             DisplayAlert("Se inserto el registró  :", dato1, "aceptar");
             listaProduccion.ItemsSource = ResProd.DB.Produccion.ToList();
+            */
             //=======
 
 

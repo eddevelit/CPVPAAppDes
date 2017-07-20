@@ -3,9 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CPVPAAppDes.PreseProd">
     <ContentPage.Content>
-        <StackLayout  BackgroundColor="#FFFFFF">
-            <Label Text="Cantidad" VerticalOptions="Start"  HorizontalOptions="Start"/>
-            <Label Text="{Binding Cantidad }" x:Name="CantPreseprod" VerticalOptions="Center"  HorizontalOptions="Center"/>
+        <StackLayout  BackgroundColor="#797F96" 
+                      Padding="10"
+                      Spacing="10">
+            <!--Label Text="Cantidad" 
+            VerticalOptions="Start"  
+            HorizontalOptions="Start"/-->
+            <Label Text="{Binding Cantidad }" 
+                   x:Name="CantPreseprod" 
+                   VerticalOptions="Center"  
+                   HorizontalOptions="Center"
+                   IsVisible="False"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -17,9 +25,23 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-
-                <Label Text="Presentación a producir" XAlign="Center" FontSize="Large" FontFamily="MarkerFelt-Thin" Grid.Row="0" Grid.ColumnSpan="3" />
-                <Picker x:Name="Picker" SelectedItem="355ml" Title="Selecciona una presentación" Grid.Row="1" Grid.ColumnSpan="3" >
+                <Label Text="Presentación a producir" 
+                       Font="24" 
+                       FontFamily="MarkerFelt-Thin"
+                       XAlign="Center" 
+                       YAlign="End"
+                       TextColor="White"
+                       Grid.Row="0"
+                       Grid.ColumnSpan="3"
+                       FontAttributes="Bold"
+                       />
+                <Picker x:Name="Picker" 
+                        SelectedItem="355ml" 
+                        Title="Selecciona una presentación" 
+                        Grid.Row="1" 
+                        Grid.ColumnSpan="3" 
+                        TextColor="White"
+                        Margin="5">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>355ml</x:String>
@@ -30,8 +52,16 @@
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>
-
-                <Button BackgroundColor="#C4EAFF" x:Name="btnPres" WidthRequest="10" HeightRequest="100" Text="Siguiente"  Clicked="btnPres_Clicked" Grid.Row="2" Grid.Column="2"></Button>
+                <Button BackgroundColor="#8890B5" 
+                        x:Name="btnPres" 
+                        WidthRequest="10" 
+                        HeightRequest="100" 
+                        Text="Siguiente" 
+                        TextColor="White" 
+                        Clicked="btnPres_Clicked" 
+                        Grid.Row="2" 
+                        Grid.Column="2">
+                </Button>
 
             </Grid>
               </StackLayout>

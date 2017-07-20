@@ -3,11 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CPVPAAppDes.SelecOtrCan">
     <ContentPage.Content>
-        <StackLayout  BackgroundColor="#FFFFFF" Padding="10" Spacing="10">
+        <StackLayout  BackgroundColor="#797F96"
+                      Padding="10" 
+                      Spacing="10">
             <Label Text="Cantidad a producir"  
                    Font="24" 
                    HorizontalOptions="Center"
+                   TextColor="#FFFFFF" 
                    FontAttributes="Bold"
+                   FontFamily="MarkerFelt-Thin"
                    />
              <Grid >
                 <Grid.RowDefinitions>
@@ -25,17 +29,18 @@
                    Grid.Row="1" 
                    Grid.ColumnSpan="2"
                    FontSize="24"
-                   TextColor="#5FBDF5"
-                />
+                   TextColor="#FFFFFF" />
+                 <!--
                 <Button x:Name="btnBack"
                     WidthRequest="100"
                     HeightRequest="100"
                     Text="Atras"
                     Grid.Row="2" Grid.Column="0"
                     Clicked="btnBack_Clicked"
-                    TextColor="#5FBDF5"
-                    BackgroundColor="#C4EAFF">
+                    TextColor="#FFFFFF" 
+                    BackgroundColor="#929ABE">
                 </Button>
+                 -->
                 <Button x:Name="btnNext" 
                     WidthRequest="100"
                     HeightRequest="100" 
@@ -43,8 +48,8 @@
                     Clicked="btnNext_Clicked"
                     Grid.Column="1"
                     Grid.Row="2"
-                    TextColor="#5FBDF5"
-                    BackgroundColor="#C4EAFF">
+                    TextColor="#FFFFFF"
+                    BackgroundColor="#929ABE">
                 </Button>
             </Grid>
             <ListView x:Name="listaProduccion" />

@@ -3,12 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CPVPAAppDes.SelecSabor">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#FFFFFF">
+        <StackLayout BackgroundColor="#797F96"
+                      Padding="10" 
+                      Spacing="10">
 
-            <Label Text="{Binding valCat }" x:Name="CantProd" VerticalOptions="Center"  HorizontalOptions="Center"/>
-             <Label Text="Seleccione un sabor" />
+            <Label Text="{Binding valCat }" 
+                   x:Name="CantProd" 
+                   VerticalOptions="Center"  
+                   HorizontalOptions="Center"
+                   IsVisible="False"/>
             <Grid>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
@@ -16,17 +22,51 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-              
-                
-                <Button  x:Name="btnSab1"  Image="mandarina.png"  WidthRequest="100"
-                         HeightRequest="100"   Text="Horchata" Clicked="btnSab1_Clicked"   Grid.Row="0" Grid.Column="0" TextColor="#5FBDF5">
-                   
+                <Label Text="Seleccione un sabor" 
+                       Font="24" 
+                       HorizontalOptions="Center"
+                       TextColor="#FFFFFF" 
+                       FontAttributes="Bold"
+                       FontFamily="MarkerFelt-Thin"
+                       Grid.ColumnSpan="2"
+                       Grid.Row="0"/>
+                <Button  x:Name="btnSab1"  
+                         WidthRequest="100"
+                         HeightRequest="100"   
+                         Text="Horchata" 
+                         Clicked="btnSab1_Clicked"   
+                         Grid.Row="1" 
+                         Grid.Column="0" 
+                         TextColor="#FFFFFF"
+                         BackgroundColor="#929ABE">
                 </Button>
-                <Button  x:Name="btnSab2" BackgroundColor="#C4EAFF" WidthRequest="50" 
-                         HeightRequest="50"  Text="Mandarina" Clicked="btnSab2_Clicked"   Grid.Row="0" Grid.Column="1" TextColor="#5FBDF5"/>
-                <Button  x:Name="btnSab3" BackgroundColor="#C4EAFF" WidthRequest="100"
-                         HeightRequest="100"  Text="Jamaica"   Clicked="btnSab3_Clicked"   Grid.Row="1" Grid.Column="0" TextColor="#5FBDF5"/>
-                <Button  x:Name="btnSab4" BackgroundColor="#C4EAFF" WidthRequest="100" HeightRequest="100"  Text="Sandia"    Clicked="btnSab4_Clicked"   Grid.Row="1" Grid.Column="1" TextColor="#5FBDF5"/>
+                <Button  x:Name="btnSab2" 
+                         BackgroundColor="#929ABE"
+                         WidthRequest="50" 
+                         HeightRequest="50"  
+                         Text="Mandarina" 
+                         Clicked="btnSab2_Clicked"   
+                         Grid.Row="1" 
+                         Grid.Column="1" 
+                         TextColor="#FFFFFF"/>
+                <Button  x:Name="btnSab3" 
+                         BackgroundColor="#929ABE" 
+                         WidthRequest="100"
+                         HeightRequest="100"  
+                         Text="Jamaica"   
+                         Clicked="btnSab3_Clicked"   
+                         Grid.Row="2" 
+                         Grid.Column="0" 
+                         TextColor="#FFFFFF"/>
+                <Button  x:Name="btnSab4" 
+                         BackgroundColor="#929ABE"
+                         WidthRequest="100" 
+                         HeightRequest="100"  
+                         Text="Sandia"    
+                         Clicked="btnSab4_Clicked"   
+                         Grid.Row="2" 
+                         Grid.Column="1" 
+                         TextColor="#FFFFFF"/>
             </Grid>
             <!--Button x:Name="SelecSabNext" 
                     Text="Siguiente"
