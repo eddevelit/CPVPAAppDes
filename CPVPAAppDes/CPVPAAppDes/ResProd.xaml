@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CPVPAAppDes.ResProd">
+    <ContentPage.Content>
+
+        <!--<Label Text="Cantidad" VerticalOptions="Start"  HorizontalOptions="Start"/>--> 
+       
+        <StackLayout BackgroundColor="#FFFFFF" HorizontalOptions="Center">
+            <Label Text="Cantidad" x:Name="CatPro"   VerticalOptions="Start"  HorizontalOptions="Start"/>
+            <Label Text="Presentacion" x:Name="PresProd" VerticalOptions="Start"  HorizontalOptions="Start"/>
+            <Label Text="Sabor" x:Name="SabPro"   VerticalOptions="Start"  HorizontalOptions="Start"/>
+            <Label Text="Resumen de producción"
+                   TextColor="White"/>
+
+            <Button Clicked="BtnSubmit" Text="Producir" x:Name="btnSubmit1" TextColor="#5FBDF5" BackgroundColor="#C4EAFF"/> 
+            <ListView x:Name="listaProduccion" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

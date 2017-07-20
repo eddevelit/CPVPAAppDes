@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CPVPAAppDes.SelecSabor">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#FFFFFF">
+
+            <Label Text="{Binding valCat }" x:Name="CantProd" VerticalOptions="Center"  HorizontalOptions="Center"/>
+             <Label Text="Seleccione un sabor" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+              
+                
+                <Button  x:Name="btnSab1"  Image="mandarina.png"  WidthRequest="100"
+                         HeightRequest="100"   Text="Horchata" Clicked="btnSab1_Clicked"   Grid.Row="0" Grid.Column="0" TextColor="#5FBDF5">
+                   
+                </Button>
+                <Button  x:Name="btnSab2" BackgroundColor="#C4EAFF" WidthRequest="50" 
+                         HeightRequest="50"  Text="Mandarina" Clicked="btnSab2_Clicked"   Grid.Row="0" Grid.Column="1" TextColor="#5FBDF5"/>
+                <Button  x:Name="btnSab3" BackgroundColor="#C4EAFF" WidthRequest="100"
+                         HeightRequest="100"  Text="Jamaica"   Clicked="btnSab3_Clicked"   Grid.Row="1" Grid.Column="0" TextColor="#5FBDF5"/>
+                <Button  x:Name="btnSab4" BackgroundColor="#C4EAFF" WidthRequest="100" HeightRequest="100"  Text="Sandia"    Clicked="btnSab4_Clicked"   Grid.Row="1" Grid.Column="1" TextColor="#5FBDF5"/>
+            </Grid>
+            <!--Button x:Name="SelecSabNext" 
+                    Text="Siguiente"
+                    Clicked="SelecSabNext_Clicked"
+                    BackgroundColor="#C4EAFF"
+                    TextColor="#5FBDF5"
+                    /-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

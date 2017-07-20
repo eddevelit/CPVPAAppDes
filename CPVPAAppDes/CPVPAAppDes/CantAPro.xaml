@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CPVPAAppDes.CantAPro">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#FFFFFF">
+            <Label Text="Cantidad a producir" XAlign="Center" FontSize="Large" FontFamily="MarkerFelt-Thin"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button  x:Name="btnCant1"  TextColor="#5FBDF5" BackgroundColor="#C4EAFF" WidthRequest="100" HeightRequest="100"   Text="5"  Clicked="btnCant1_Clicked"   Grid.Row="0" Grid.Column="0"/>
+                <Button  x:Name="btnCant2"  TextColor="#5FBDF5" BackgroundColor="#C4EAFF"  WidthRequest="100" HeightRequest="100"  Text="10" Clicked="btnCant2_Clicked"   Grid.Row="0" Grid.Column="1"/>
+                <Button  x:Name="btnCant3"  TextColor="#5FBDF5" BackgroundColor="#C4EAFF"  WidthRequest="100" HeightRequest="100"  Text="20" Clicked="btnCant3_Clicked"   Grid.Row="1" Grid.Column="0"/>
+                <Button  x:Name="btnCant4"  TextColor="#5FBDF5" BackgroundColor="#C4EAFF"  WidthRequest="100" HeightRequest="100"  Text="50" Clicked="btnCant4_Clicked"   Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+            <Button BackgroundColor="#C4EAFF" x:Name="btnCantOthe" WidthRequest="100" HeightRequest="100" Text="Otra"  Clicked="btnCantOthe_Clicked" TextColor="#5FBDF5"></Button>
+            <!--ListView x:Name="datosListView"--><!--/-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
