@@ -45,16 +45,23 @@ namespace CPVPAAppDes
             var SaborLabel = new Label
             {
                 TextColor = Color.White,
-                HorizontalOptions = LayoutOptions.End,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
                 FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
             };
             SaborLabel.SetBinding(Label.TextProperty, new Binding("Sabor"));
+            var FechaLabel = new Label
+            {
+                TextColor = Color.White,
+                HorizontalOptions = LayoutOptions.End,
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+            };
+            FechaLabel.SetBinding(Label.TextProperty, new Binding("Fecha"));
 
-             View = new StackLayout
+            View = new StackLayout
             {
                 Children =
                 {
-                    IdProduccionLabel, CantidadLabel, PresentacionLabel, SaborLabel
+                    IdProduccionLabel, CantidadLabel, PresentacionLabel, SaborLabel, FechaLabel
                 },
                 Spacing = 0,
                 Padding = 10,

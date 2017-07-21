@@ -26,6 +26,11 @@
                    VerticalOptions="Start"  
                    HorizontalOptions="Start"
                    IsVisible="False"/>
+            <Label Text="Sabor" 
+                   x:Name="Fecha"   
+                   VerticalOptions="Start"  
+                   HorizontalOptions="Start"
+                   IsVisible="False"/>
             <Label Text="Resumen de producción"
                    Font="24" 
                    HorizontalOptions="Center"
@@ -40,11 +45,14 @@
                    x:Name="IdCan"
                        HorizontalOptions="CenterAndExpand"/>
                 <Label Text="Presentación" 
-                   x:Name="IdPre"
+                       x:Name="IdPre"
                        HorizontalOptions="FillAndExpand"
                    />
                 <Label Text="Sabor" 
-                   x:Name="IdSab"
+                       x:Name="IdSab"
+                       HorizontalOptions="FillAndExpand"/>
+                <Label Text="Fecha"
+                       x:Name="IdFecha"
                        HorizontalOptions="EndAndExpand"/>
             </StackLayout>
 

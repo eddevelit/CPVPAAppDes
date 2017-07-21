@@ -20,6 +20,7 @@ namespace CPVPAAppDes
         String dato1;
         String dato2;
         String dato3;
+        //String dato4;
 
         public ResProd(CantPres pro3s)
         {
@@ -27,9 +28,11 @@ namespace CPVPAAppDes
              dato1 = datos[0];
              dato2 = datos[1];
              dato3 = datos[2];
+             //dato4 = datos[3];
             //DisplayAlert("Datos", dato1, "aceptar");
             //DisplayAlert("Datos", dato2, "aceptar");
             //DisplayAlert("Datos", dato3, "aceptar");
+            //DisplayAlert("Datos", dato4, "aceptar");
             ////======debas
 
             //Keys.DataBaseName = "prueba.db3";
@@ -43,15 +46,18 @@ namespace CPVPAAppDes
             CatPro.Text = dato1;
             PresProd.Text = dato2;
             SabPro.Text = dato3;
+            // Fecha.Text = dato4;
+            string fecha = DateTime.Now.ToString("dd/MM/yy");
+            DisplayAlert("Datos", fecha, "aceptar");
             listaProduccion.ItemTemplate = new DataTemplate(typeof(ProduccionCell));
             Keys.DataBaseName = "prueba.db3";
             ResProd.DB = LocalDB.Instance;
-
             ResProd.DB.Produccion.Add(new ORM.Produccion
             {
                 Cantidad = int.Parse(CatPro.Text),
                 Presentacion = PresProd.Text,
-                Sabor = SabPro.Text
+                Sabor = SabPro.Text,
+                Fecha = fecha
 
             });
             ResProd.DB.SaveChanges();

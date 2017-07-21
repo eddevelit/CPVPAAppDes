@@ -11,7 +11,7 @@
 namespace CPVPAAppDes {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\CE1\\Documents\\Visual Studio 2017\\Projects\\CPVPAAppDes\\CPVPAAppDes\\CPVPAA" +
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\CE1\\documents\\visual studio 2017\\Projects\\CPVPAAppDes\\CPVPAAppDes\\CPVPAA" +
         "ppDes\\App.xaml")]
     public partial class App : global::Xamarin.Forms.Application {
         

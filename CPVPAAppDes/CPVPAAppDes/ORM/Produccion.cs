@@ -14,8 +14,8 @@ namespace CPVPAAppDes.ORM
         public int      Cantidad { get; set; }
         public string   Presentacion { get; set; }
         public string   Sabor { get; set; }
+        public string   Fecha { get; set; }
         /*
-        public DateTime Fecha { get; set; }
         public DateTime HoraMinutos { get; set; }
         public DateTime HoraMinutosSegundo { get; set; }
         public DateTime Hora { get; set; }
@@ -26,7 +26,7 @@ namespace CPVPAAppDes.ORM
 
         public override string ToString()
         {
-            return string.Format("[{0}{1}{2}{3}]", IdProduccion, Cantidad, Presentacion, Sabor);
+            return string.Format("[{0}{1}{2}{3}{4}]", IdProduccion, Cantidad, Presentacion, Sabor,Fecha);
         }
     }
     

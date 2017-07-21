@@ -93,10 +93,12 @@ namespace CPVPAAppDes
 
         private async void btnSab4_Clicked(object sender, EventArgs e)
         {
-            var cantiCAP = valCat;
+            var cantiCAP  = valCat;
             var presenCAP = valPres;
-             var sabSap = btnSab4.Text;
-            string[] Prod3 = new string[] { cantiCAP, presenCAP, sabSap };
+            var sabSap    = btnSab4.Text;
+            //var fecha = DateTime.Now.ToString("dd/MM/yy");
+            //await DisplayAlert("Datos", fecha, "aceptar");
+            string[] Prod3 = new string[] { cantiCAP, presenCAP, sabSap};
             // var cantidadPP = new CantPres { Cantidad = cantiCAP };
             var Pro3s = new CantPres { CantidadPres = Prod3 };
 
