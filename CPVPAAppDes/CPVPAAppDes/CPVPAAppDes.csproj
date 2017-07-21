@@ -54,6 +54,9 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ORM\Cantidad.cs" />
+    <Compile Include="ORM\Presentacion.cs" />
+    <Compile Include="ORM\Sabor.cs" />
     <Compile Include="PreseProd.xaml.cs">
       <DependentUpon>PreseProd.xaml</DependentUpon>
     </Compile>

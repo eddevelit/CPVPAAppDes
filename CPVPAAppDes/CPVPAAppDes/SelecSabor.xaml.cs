@@ -26,6 +26,26 @@ namespace CPVPAAppDes
             //DisplayAlert("Datos", valCat, "aceptar");
             //DisplayAlert("Datos", valPres, "aceptar");
 
+
+            //============================Creating TapGestureRecognizers  
+            //var tapImage = new TapGestureRecognizer();
+            ////Binding events  
+            //tapImage.Tapped += tapImage_Tapped;
+            ////Associating tap events to the image buttons  
+            //btnSab4.GestureRecognizers.Add(tapImage);
+            //void tapImage_Tapped(object sender, EventArgs e)
+            //{
+            //    // handle the tap  
+            //    var cantiCAP = valCat;
+            //    var presenCAP = valPres;
+            //    var sabSap = "simple";
+            //    string[] Prod3 = new string[] { cantiCAP, presenCAP, sabSap };
+            //    // var cantidadPP = new CantPres { Cantidad = cantiCAP };
+            //    var Pro3s = new CantPres { CantidadPres = Prod3 };
+
+            //    this.Navigation.PushModalAsync(new ResProd(Pro3s));
+            //}
+
         }
 
         /*
@@ -75,12 +95,13 @@ namespace CPVPAAppDes
         {
             var cantiCAP = valCat;
             var presenCAP = valPres;
-            var sabSap = btnSab4.Text;
+             var sabSap = btnSab4.Text;
             string[] Prod3 = new string[] { cantiCAP, presenCAP, sabSap };
             // var cantidadPP = new CantPres { Cantidad = cantiCAP };
             var Pro3s = new CantPres { CantidadPres = Prod3 };
 
             await this.Navigation.PushModalAsync(new ResProd(Pro3s));
         }
+
     }
 }

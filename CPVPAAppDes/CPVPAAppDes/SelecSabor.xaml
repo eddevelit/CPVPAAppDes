@@ -12,7 +12,15 @@
                    VerticalOptions="Center"  
                    HorizontalOptions="Center"
                    IsVisible="False"/>
-            <Grid>
+            <Label Text="Seleccione un sabor" 
+                       Font="24" 
+                       HorizontalOptions="Center"
+                       TextColor="#FFFFFF" 
+                       FontAttributes="Bold"
+                       FontFamily="MarkerFelt-Thin"
+                      />
+
+            <!--<Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -30,50 +38,105 @@
                        FontFamily="MarkerFelt-Thin"
                        Grid.ColumnSpan="2"
                        Grid.Row="0"/>
-                <Button  x:Name="btnSab1"  
+                --><!--=====Buttons=====-->
+               
+                <!--<Button  x:Name="btnSab1"  
                          WidthRequest="100"
                          HeightRequest="100"   
-                         Text="Horchata" 
+                         Text="Jamaica" 
                          Clicked="btnSab1_Clicked"   
                          Grid.Row="1" 
                          Grid.Column="0" 
                          TextColor="#FFFFFF"
                          BackgroundColor="#929ABE">
-                </Button>
-                <Button  x:Name="btnSab2" 
+                </Button>-->
+                <!--<Button  x:Name="btnSab2" 
+                         Image="icon"
                          BackgroundColor="#929ABE"
                          WidthRequest="50" 
                          HeightRequest="50"  
-                         Text="Mandarina" 
+                         Text="Horchata" 
                          Clicked="btnSab2_Clicked"   
                          Grid.Row="1" 
                          Grid.Column="1" 
-                         TextColor="#FFFFFF"/>
-                <Button  x:Name="btnSab3" 
+                         TextColor="#FFFFFF"/>-->
+                <!--<Button  x:Name="btnSab3" 
                          BackgroundColor="#929ABE" 
                          WidthRequest="100"
                          HeightRequest="100"  
-                         Text="Jamaica"   
+                         Text="Mango"   
                          Clicked="btnSab3_Clicked"   
                          Grid.Row="2" 
                          Grid.Column="0" 
-                         TextColor="#FFFFFF"/>
-                <Button  x:Name="btnSab4" 
+                         TextColor="#FFFFFF"/>-->
+                <!--<Button  x:Name="btnSab4" 
                          BackgroundColor="#929ABE"
                          WidthRequest="100" 
                          HeightRequest="100"  
-                         Text="Sandia"    
+                         Text="Simple"    
                          Clicked="btnSab4_Clicked"   
                          Grid.Row="2" 
                          Grid.Column="1" 
+                         TextColor="#FFFFFF"/>-->
+                
+                <!--================<Image  x:Name="btnSab4"
+                   Source="simple" 
+                   WidthRequest="100" 
+                   HeightRequest="100"   
+                   Grid.Row="2" 
+                   Grid.Column="1"></Image>--><!--
+            </Grid>-->
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button  x:Name="btnSab1"  
+                         WidthRequest="200"
+                         HeightRequest="150"   
+                         Text="Jamaica" 
+                         Clicked="btnSab1_Clicked"    
+                         TextColor="#FFFFFF"
+                         BackgroundColor="#929ABE"
+                       />
+                    <Button  x:Name="btnSab2" 
+                         Image="horchata2"
+                         BackgroundColor="#929ABE"
+                         WidthRequest="200" 
+                         HeightRequest="150"  
+                         Text="Horchata" 
+                         Clicked="btnSab2_Clicked"    
+                         TextColor="#FFFFFF"
+                        />
+                 
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button  x:Name="btnSab3" 
+                           
+                         BackgroundColor="#929ABE" 
+                         WidthRequest="200"
+                         HeightRequest="150"
+                             Image="mango"
+                         Text="Mango"   
+                         Clicked="btnSab3_Clicked"   
                          TextColor="#FFFFFF"/>
-            </Grid>
-            <!--Button x:Name="SelecSabNext" 
-                    Text="Siguiente"
-                    Clicked="SelecSabNext_Clicked"
-                    BackgroundColor="#C4EAFF"
-                    TextColor="#5FBDF5"
-                    /-->
+                    <Button  x:Name="btnSab4" 
+                             Image="agua"
+                         BackgroundColor="#929ABE"
+                         WidthRequest="200" 
+                         HeightRequest="150"  
+                         Text="Simple"    
+                         Clicked="btnSab4_Clicked"   
+                         TextColor="#FFFFFF"/>
+
+                </StackLayout>
+
+            </StackLayout>
+            <!--<Button  x:Name="btnSab5" 
+                         BackgroundColor="#929ABE"
+                         Image="ora.png"
+                         WidthRequest="10" 
+                         HeightRequest="10"    
+                         TextColor="#FFFFFF"/>-->
+            
+           
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

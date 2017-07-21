@@ -13,6 +13,13 @@ namespace CPVPAAppDes
         public ProduccionCell()
         {
 
+            Label header = new Label
+            {
+                Text = "Sabor",
+                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+                HorizontalOptions = LayoutOptions.EndAndExpand
+            };
+
             var IdProduccionLabel = new Label
             {
                 TextColor = Color.White,

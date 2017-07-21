@@ -5,10 +5,12 @@
     <ContentPage.Content>
 
         <!--<Label Text="Cantidad" VerticalOptions="Start"  HorizontalOptions="Start"/>-->
-
+       
+        
         <StackLayout BackgroundColor="#797F96"
                       Padding="10" 
                       Spacing="10">
+            
             <Label Text="Cantidad" 
                    x:Name="CatPro"   
                    VerticalOptions="Start"  
@@ -30,6 +32,21 @@
                    TextColor="#FFFFFF" 
                    FontAttributes="Bold"
                    FontFamily="MarkerFelt-Thin"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="ID" 
+                   x:Name="IdReg"
+                       HorizontalOptions="StartAndExpand"/>
+                <Label Text="Cantidad" 
+                   x:Name="IdCan"
+                       HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Presentación" 
+                   x:Name="IdPre"
+                       HorizontalOptions="FillAndExpand"
+                   />
+                <Label Text="Sabor" 
+                   x:Name="IdSab"
+                       HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
 
             <!--
             <Button 
@@ -41,7 +58,7 @@
             -->
             <ListView x:Name="listaProduccion" 
                       SeparatorColor="#FFFFFF" 
-                      BackgroundColor="#929ABE" />
+                      BackgroundColor="#929ABE"  />
 
         </StackLayout>
     </ContentPage.Content>
