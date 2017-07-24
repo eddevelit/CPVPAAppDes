@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CPVPAAppDes.SeleccionaInicio">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#797F96" 
+                     Padding="10">
+            <Label Text="Seleccione una opción" 
+                   XAlign="Center" 
+                   FontSize="Large" 
+                   TextColor="#FFFFFF" 
+                   FontFamily="MarkerFelt-Thin"
+                   FontAttributes="Bold"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button  x:Name="btnElec1"  TextColor="#FFFFFF" BackgroundColor="#8890B5" WidthRequest="100" HeightRequest="100" Text="Otra captura"  Grid.Column="0" Clicked="btnElec1_Clicked"/>
+                <Button  x:Name="btnElec2"  TextColor="#FFFFFF" BackgroundColor="#8890B5" WidthRequest="100" HeightRequest="100" Text="Resumen"       Grid.Column="1" Clicked="btnElec2_Clicked"/>
+            </Grid>
+            <!--ListView x:Name="datosListView"-->
+            <!--/-->
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using DevAzt.FormsX.Storage.SQLite.StandarDB;
+using DevAzt.FormsX.Storage.SQLite.LiteConnection;
 
 namespace CPVPAAppDes
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SelecSabor : ContentPage
     {
+        public static LocalDB DB { get; private set; }
         String valCat;
         String valPres;
         public SelecSabor(CantPres CantidadPresO)
@@ -45,7 +48,7 @@ namespace CPVPAAppDes
 
             //    this.Navigation.PushModalAsync(new ResProd(Pro3s));
             //}
-
+            
         }
 
         /*
@@ -58,51 +61,112 @@ namespace CPVPAAppDes
         {
             var cantiCAP = valCat;
             var presenCAP = valPres;
-            var sabSap = btnSab1.Text;
-            string[] Prod3 = new string[] { cantiCAP, presenCAP, sabSap };
-            // var cantidadPP = new CantPres { Cantidad = cantiCAP };
-            var Pro3s = new CantPres { CantidadPres = Prod3 };
+            //var sabSap = btnSab1.Text;
+            var sabSap = "Jamaica";
 
-            await this.Navigation.PushModalAsync(new ResProd(Pro3s));
-          
+            //string[] Prod3 = new string[] { cantiCAP, presenCAP, sabSap };
+            // var cantidadPP = new CantPres { Cantidad = cantiCAP };
+            //var Pro3s = new CantPres { CantidadPres = Prod3 };
+
+            string fecha = DateTime.Now.ToString("dd/MM/yy");
+           // await DisplayAlert("Datos", fecha, "aceptar");
+            Keys.DataBaseName = "prueba.db3";
+            SelecSabor.DB = LocalDB.Instance;
+            SelecSabor.DB.Produccion.Add(new ORM.Produccion
+            {
+                Cantidad = int.Parse(cantiCAP),
+                Presentacion = presenCAP,
+                Sabor = sabSap,
+                Fecha = fecha
+
+            });
+            SelecSabor.DB.SaveChanges();
+
+            //await this.Navigation.PushModalAsync(new ResProd(Pro3s));
+            await this.Navigation.PushModalAsync(new SeleccionaInicio());
+
         }
 
         private async void btnSab2_Clicked(object sender, EventArgs e)
         {
             var cantiCAP = valCat;
             var presenCAP = valPres;
-            var sabSap = btnSab2.Text;
-            string[] Prod3 = new string[] { cantiCAP, presenCAP, sabSap };
+            //var sabSap = btnSab2.Text;
+            var sabSap = "Horchata"; 
+            // string[] Prod3 = new string[] { cantiCAP, presenCAP, sabSap };
             // var cantidadPP = new CantPres { Cantidad = cantiCAP };
-            var Pro3s = new CantPres { CantidadPres = Prod3 };
+            // var Pro3s = new CantPres { CantidadPres = Prod3 };
 
-            await this.Navigation.PushModalAsync(new ResProd(Pro3s));
+            string fecha = DateTime.Now.ToString("dd/MM/yy");
+            //await DisplayAlert("Datos", fecha, "aceptar");
+            Keys.DataBaseName = "prueba.db3";
+            SelecSabor.DB = LocalDB.Instance;
+            SelecSabor.DB.Produccion.Add(new ORM.Produccion
+            {
+                Cantidad = int.Parse(cantiCAP),
+                Presentacion = presenCAP,
+                Sabor = sabSap,
+                Fecha = fecha
+
+            });
+            SelecSabor.DB.SaveChanges();
+
+            await this.Navigation.PushModalAsync(new SeleccionaInicio());
         }
 
         private async void btnSab3_Clicked(object sender, EventArgs e)
         {
             var cantiCAP = valCat;
             var presenCAP = valPres;
-            var sabSap = btnSab3.Text;
-            string[] Prod3 = new string[] { cantiCAP, presenCAP, sabSap };
-            // var cantidadPP = new CantPres { Cantidad = cantiCAP };
-            var Pro3s = new CantPres { CantidadPres = Prod3 };
+            //var sabSap = btnSab3.Text;
+            var sabSap = "Mango";
+            //string[] Prod3 = new string[] { cantiCAP, presenCAP, sabSap };
+            //// var cantidadPP = new CantPres { Cantidad = cantiCAP };
+            //var Pro3s = new CantPres { CantidadPres = Prod3 };
 
-            await this.Navigation.PushModalAsync(new ResProd(Pro3s));
+            string fecha = DateTime.Now.ToString("dd/MM/yy");
+            //await DisplayAlert("Datos", fecha, "aceptar");
+            Keys.DataBaseName = "prueba.db3";
+            SelecSabor.DB = LocalDB.Instance;
+            SelecSabor.DB.Produccion.Add(new ORM.Produccion
+            {
+                Cantidad = int.Parse(cantiCAP),
+                Presentacion = presenCAP,
+                Sabor = sabSap,
+                Fecha = fecha
+
+            });
+            SelecSabor.DB.SaveChanges();
+
+            await this.Navigation.PushModalAsync(new SeleccionaInicio());
         }
 
         private async void btnSab4_Clicked(object sender, EventArgs e)
         {
             var cantiCAP  = valCat;
             var presenCAP = valPres;
-            var sabSap    = btnSab4.Text;
+            //var sabSap    = btnSab4.Text;
+            var sabSap = "Simple";
             //var fecha = DateTime.Now.ToString("dd/MM/yy");
             //await DisplayAlert("Datos", fecha, "aceptar");
-            string[] Prod3 = new string[] { cantiCAP, presenCAP, sabSap};
-            // var cantidadPP = new CantPres { Cantidad = cantiCAP };
-            var Pro3s = new CantPres { CantidadPres = Prod3 };
+            //string[] Prod3 = new string[] { cantiCAP, presenCAP, sabSap};
+            //// var cantidadPP = new CantPres { Cantidad = cantiCAP };
+            //var Pro3s = new CantPres { CantidadPres = Prod3 };
+            string fecha = DateTime.Now.ToString("dd/MM/yy");
+            //await DisplayAlert("Datos", fecha, "aceptar");
+            Keys.DataBaseName = "prueba.db3";
+            SelecSabor.DB = LocalDB.Instance;
+            SelecSabor.DB.Produccion.Add(new ORM.Produccion
+            {
+                Cantidad = int.Parse(cantiCAP),
+                Presentacion = presenCAP,
+                Sabor = sabSap,
+                Fecha = fecha
 
-            await this.Navigation.PushModalAsync(new ResProd(Pro3s));
+            });
+            SelecSabor.DB.SaveChanges();
+
+            await this.Navigation.PushModalAsync(new SeleccionaInicio());
         }
 
     }

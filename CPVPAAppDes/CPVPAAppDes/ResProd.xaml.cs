@@ -17,18 +17,23 @@ namespace CPVPAAppDes
     {
         public static LocalDB DB { get; private set; }
 
-        String dato1;
-        String dato2;
+        //String dato1;
+        /*
+         * String dato2;
         String dato3;
+         */
         //String dato4;
 
-        public ResProd(CantPres pro3s)
+        //public ResProd(CantPres pro3s)
+        public ResProd()
         {
+            /*
             String[] datos = pro3s.CantidadPres.ToArray();
              dato1 = datos[0];
              dato2 = datos[1];
              dato3 = datos[2];
-             //dato4 = datos[3];
+             */
+            //dato4 = datos[3];
             //DisplayAlert("Datos", dato1, "aceptar");
             //DisplayAlert("Datos", dato2, "aceptar");
             //DisplayAlert("Datos", dato3, "aceptar");
@@ -43,15 +48,21 @@ namespace CPVPAAppDes
             InitializeComponent();
             // BindingContext = dato1;
             //PresProd.SetBinding(Label.TextProperty, new Binding(dato2));
+            /*
             CatPro.Text = dato1;
             PresProd.Text = dato2;
             SabPro.Text = dato3;
+            */
             // Fecha.Text = dato4;
+            /*
             string fecha = DateTime.Now.ToString("dd/MM/yy");
             DisplayAlert("Datos", fecha, "aceptar");
+            */
             listaProduccion.ItemTemplate = new DataTemplate(typeof(ProduccionCell));
+            
             Keys.DataBaseName = "prueba.db3";
             ResProd.DB = LocalDB.Instance;
+            /*
             ResProd.DB.Produccion.Add(new ORM.Produccion
             {
                 Cantidad = int.Parse(CatPro.Text),
@@ -63,6 +74,7 @@ namespace CPVPAAppDes
             ResProd.DB.SaveChanges();
             dato1 = "ok";
             DisplayAlert("Se inserto el registró  :", dato1, "aceptar");
+            */
             listaProduccion.ItemsSource = ResProd.DB.Produccion.ToList();
 
             //using (var data = new DataAccess())
@@ -72,10 +84,10 @@ namespace CPVPAAppDes
 
         }
 
-        private void BtnSubmit(object sender, EventArgs e)
+        private async void BtnSubmit(object sender, EventArgs e)
         {
 
-
+            await this.Navigation.PushModalAsync(new CantAPro());
             //Produccion newProd = new Produccion
             //{
 

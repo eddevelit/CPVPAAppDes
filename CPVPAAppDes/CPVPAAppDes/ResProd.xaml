@@ -67,6 +67,14 @@
             <ListView x:Name="listaProduccion" 
                       SeparatorColor="#FFFFFF" 
                       BackgroundColor="#929ABE"  />
+            
+            <Button 
+                Clicked="BtnSubmit" 
+                Text="Otra captura" 
+                x:Name="btnSubmit1" 
+                TextColor="#FFFFFF" 
+                BackgroundColor="#8890B5"/>
+            
 
         </StackLayout>
     </ContentPage.Content>
