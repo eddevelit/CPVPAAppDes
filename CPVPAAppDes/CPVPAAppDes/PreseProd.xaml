@@ -6,11 +6,13 @@
         <StackLayout  BackgroundColor="#797F96" 
                       Padding="10"
                       Spacing="10">
-            <!--Label Text="Cantidad" 
-            VerticalOptions="Start"  
-            HorizontalOptions="Start"/-->
-            <Label Text="{Binding Cantidad }" 
-                   x:Name="CantPreseprod" 
+            <Label Text="{Binding valsabor}"
+                   x:Name="sabor"
+                    VerticalOptions="Center"  
+                   HorizontalOptions="Center"
+                   IsVisible="False"/>
+            <Label Text="{Binding valCat }" 
+                   x:Name="CantProd" 
                    VerticalOptions="Center"  
                    HorizontalOptions="Center"
                    IsVisible="False"/>
@@ -35,34 +37,75 @@
                        Grid.ColumnSpan="3"
                        FontAttributes="Bold"
                        />
-                <Picker x:Name="Picker" 
-                        SelectedItem="355ml" 
-                        Title="Selecciona una presentación" 
-                        Grid.Row="1" 
-                        Grid.ColumnSpan="3" 
-                        TextColor="White"
-                        Margin="5">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>355ml</x:String>
-                            <x:String>600ml</x:String>
-                            <x:String>1lt</x:String>
-                            <x:String>2lt</x:String>
-                            <x:String>20lt.</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
-                <Button BackgroundColor="#8890B5" 
-                        x:Name="btnPres" 
-                        WidthRequest="10" 
-                        HeightRequest="100" 
-                        Text="Siguiente" 
-                        TextColor="White" 
-                        Clicked="btnPres_Clicked" 
-                        Grid.Row="2" 
-                        Grid.Column="2">
-                </Button>
-
+                <Button  x:Name="btnPres1" 
+                         Text="250 ml."
+                         BackgroundColor="#929ABE" 
+                         WidthRequest="200"
+                         HeightRequest="150"  
+                         TextColor="#FFFFFF"
+                         Font="22" 
+                         FontFamily=" MarkerFelt-Thin"
+                          Grid.Row="1"
+                         Grid.Column="0"
+                         HorizontalOptions="FillAndExpand"
+                         Clicked="btnPres1_Clicked"/>
+                <Button  x:Name="btnPres2" 
+                         Text="50 ml."
+                         BackgroundColor="#929ABE" 
+                         WidthRequest="200"
+                         HeightRequest="150"  
+                         TextColor="#FFFFFF"
+                          Font="22" 
+                         FontFamily=" MarkerFelt-Thin"
+                         Grid.Row="1"
+                        Grid.Column="1"
+                         Clicked="btnPres2_Clicked"/>
+                <Button  x:Name="btnPres3" 
+                         Text="1 lt."
+                         BackgroundColor="#929ABE" 
+                         WidthRequest="200"
+                         HeightRequest="150"  
+                         TextColor="#FFFFFF"
+                          Font="22" 
+                         FontFamily=" MarkerFelt-Thin"
+                         Grid.Row="1"
+                         Grid.Column="2"
+                         Clicked="btnPres3_Clicked"/>
+                <Button  x:Name="btnPres4"
+                         Text="1.5 lt."
+                         BackgroundColor="#929ABE" 
+                         WidthRequest="200"
+                         HeightRequest="150"  
+                         TextColor="#FFFFFF"
+                          Font="22" 
+                         FontFamily=" MarkerFelt-Thin"
+                         Grid.Row="2"
+                         Grid.Column="0"
+                         Clicked="btnPres4_Clicked"/>
+                <Button  x:Name="btnPres5" 
+                         Text="10 lt."
+                         BackgroundColor="#929ABE" 
+                         WidthRequest="200"
+                         HeightRequest="150"  
+                         TextColor="#FFFFFF"
+                          Font="22" 
+                         FontFamily=" MarkerFelt-Thin"
+                         Grid.Row="2"
+                         Grid.Column="1"
+                         />
+                <!--Clicked="btnPres5_Clicked"-->
+                <Button  x:Name="btnPres6" 
+                         Text="20 lt."
+                         BackgroundColor="#929ABE" 
+                         WidthRequest="200"
+                         HeightRequest="150"  
+                         TextColor="#FFFFFF"
+                          Font="22" 
+                         FontFamily=" MarkerFelt-Thin"
+                         Grid.Row="2"
+                         Grid.Column="2"/>
+                <!---
+                         Clicked="btnPres6_Clicked"-->
             </Grid>
               </StackLayout>
     </ContentPage.Content>

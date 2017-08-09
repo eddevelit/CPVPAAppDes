@@ -4,9 +4,19 @@
              xmlns:local="clr-namespace:CPVPAAppDes"
              x:Class="CPVPAAppDes.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
+    <ContentPage.Content>
+        <StackLayout  BackgroundColor="#797F96">
+            <Label Text="Welcome to Xamarin Forms!" 
+           x:Name="LabelChange"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" 
+           BackgroundColor="Azure"/>
+            <Label 
+           x:Name="LabelChange1"
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
+        </StackLayout>
+    </ContentPage.Content>
     
 
 </ContentPage>

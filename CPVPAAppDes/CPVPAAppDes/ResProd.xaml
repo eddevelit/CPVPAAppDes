@@ -13,23 +13,23 @@
             
             <Label Text="Cantidad" 
                    x:Name="CatPro"   
-                   VerticalOptions="Start"  
-                   HorizontalOptions="Start"
+           
+                   HorizontalOptions="StartAndExpand"
                    IsVisible="False"/>
             <Label Text="Presentacion" 
                    x:Name="PresProd" 
-                   VerticalOptions="Start"  
-                   HorizontalOptions="Start"
+  
+                   HorizontalOptions="FillAndExpand"
                    IsVisible="False"/>
             <Label Text="Sabor" 
                    x:Name="SabPro"   
-                   VerticalOptions="Start"  
-                   HorizontalOptions="Start"
+                    
+                   HorizontalOptions="FillAndExpand"
                    IsVisible="False"/>
             <Label Text="Sabor" 
                    x:Name="Fecha"   
-                   VerticalOptions="Start"  
-                   HorizontalOptions="Start"
+             
+                   HorizontalOptions="EndAndExpand"
                    IsVisible="False"/>
             <Label Text="Resumen de producción"
                    Font="24" 
@@ -56,14 +56,7 @@
                        HorizontalOptions="EndAndExpand"/>
             </StackLayout>
 
-            <!--
-            <Button 
-                Clicked="BtnSubmit" 
-                Text="Producir" 
-                x:Name="btnSubmit1" 
-                TextColor="#5FBDF5" 
-                BackgroundColor="#C4EAFF"/>
-            -->
+    
             <ListView x:Name="listaProduccion" 
                       SeparatorColor="#FFFFFF" 
                       BackgroundColor="#929ABE"  />

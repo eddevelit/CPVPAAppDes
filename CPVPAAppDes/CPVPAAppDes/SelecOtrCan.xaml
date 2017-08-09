@@ -30,17 +30,6 @@
                    Grid.ColumnSpan="2"
                    FontSize="24"
                    TextColor="#FFFFFF" />
-                 <!--
-                <Button x:Name="btnBack"
-                    WidthRequest="100"
-                    HeightRequest="100"
-                    Text="Atras"
-                    Grid.Row="2" Grid.Column="0"
-                    Clicked="btnBack_Clicked"
-                    TextColor="#FFFFFF" 
-                    BackgroundColor="#929ABE">
-                </Button>
-                 -->
                 <Button x:Name="btnNext" 
                     WidthRequest="100"
                     HeightRequest="100" 

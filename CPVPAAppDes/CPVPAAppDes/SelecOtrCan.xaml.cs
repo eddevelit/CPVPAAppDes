@@ -36,28 +36,7 @@ namespace CPVPAAppDes
             var cantiCAP = Int32.Parse(EntryCant.Text);
 
             var cantidadPP = new CantidadProd { Cantidad = cantiCAP };
-            // Produccion OtraCan = new Produccion {
-
-            //   Cantidad = int.Parse(EntryCant.Text)
-
-            //};
-            //using (var datos = new DataAccess()) {
-            //   datos.InsertProduccion(OtraCan); 
-            //este codigo es para insertar los datos pero al parecer se requeiren todos     
-            ///por lo que se realizará la insercion al final
-
-            //listaProduccion.ItemsSource = datos.GetProducciones();
-
-            //datos.s
-            //this.Navigation.PushModalAsync(new PreseProd(cantidadPP));
-            // }
-            await this.Navigation.PushModalAsync(new PreseProd(cantidadPP));
+            await this.Navigation.PushModalAsync(new SelecSabor(cantidadPP));
         }
-        /*
-        private async void btnBack_Clicked(object sender, EventArgs e)
-        {
-            await this.Navigation.PushModalAsync(new CantAPro());
-        }
-        */
     }
 }

@@ -26,6 +26,8 @@ namespace CPVPAAppDes.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::PCLStorage.Resource.String.ApplicationName = global::CPVPAAppDes.Droid.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::CPVPAAppDes.Droid.Resource.String.Hello;
 			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::CPVPAAppDes.Droid.Resource.String.ApplicationName;
 			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::CPVPAAppDes.Droid.Resource.String.Hello;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::CPVPAAppDes.Droid.Resource.Attribute.actionBarSize;

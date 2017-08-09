@@ -12,14 +12,15 @@ namespace CPVPAAppDes
         public App()
         {
             InitializeComponent();
-
-            // MainPage = new CPVPAAppDes.MainPage();
+            
             MainPage = new CPVPAAppDes.CantAPro();
+          
         }
 
         protected override void OnStart()
         {
             // Handle when your app starts
+           
         }
 
         protected override void OnSleep()

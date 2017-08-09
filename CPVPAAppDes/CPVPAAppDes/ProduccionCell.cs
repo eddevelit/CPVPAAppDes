@@ -17,7 +17,9 @@ namespace CPVPAAppDes
             {
                 Text = "Sabor",
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-                HorizontalOptions = LayoutOptions.EndAndExpand
+                HorizontalOptions = LayoutOptions.EndAndExpand,
+              
+                
             };
 
             var IdProduccionLabel = new Label
@@ -30,25 +32,33 @@ namespace CPVPAAppDes
 
             var CantidadLabel = new Label
             {
+                
                 TextColor = Color.White,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+                HorizontalOptions = LayoutOptions.CenterAndExpand,
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                HorizontalTextAlignment = TextAlignment.Center
             };
             CantidadLabel.SetBinding(Label.TextProperty, new Binding("Cantidad"));
+
             var PresentacionLabel = new Label
             {
+               
                 TextColor = Color.White,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+                HorizontalOptions = LayoutOptions.CenterAndExpand,
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                HorizontalTextAlignment = TextAlignment.Center
             };
             PresentacionLabel.SetBinding(Label.TextProperty, new Binding("Presentacion"));
             var SaborLabel = new Label
             {
+               
                 TextColor = Color.White,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+                HorizontalOptions = LayoutOptions.CenterAndExpand,
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                HorizontalTextAlignment = TextAlignment.Center
             };
             SaborLabel.SetBinding(Label.TextProperty, new Binding("Sabor"));
+
             var FechaLabel = new Label
             {
                 TextColor = Color.White,
@@ -66,8 +76,6 @@ namespace CPVPAAppDes
                 Spacing = 0,
                 Padding = 10,
                 Orientation = StackOrientation.Horizontal
-                
-
             };
         }
     }
